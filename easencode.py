@@ -1,14 +1,15 @@
 #!/usr/bin/python
 #===============================================================
-#  easencode.py - A utility to make EAS audio files
-#  February 25, 2011
+#  easencode.py - NEXDEC's sameeas-based EAS/SAME encoder utility
+#  September 27, 2020
 #
 #===============================================================
 #
 #===============================================================
 #License (see the MIT License)
 #
-#Copyright (c) 2011 John McMellen
+#SAMEEAS Copyright (c) 2011 John McMellen
+#NEXDEC (c) 2020 Nova Labs
 #
 #Permission is hereby granted, free of charge, to any person
 #obtaining a copy of this software and associated documentation
@@ -89,11 +90,11 @@ def main():
     except Exception as inst:
 	print "Exception:", inst, inst.args, sys.exc_info()[1]
 
-program_version = "1.2"
+program_version = "0.1.0"
 events = ('ean', 'eat', 'nic', 'npt', 'rmt', 'rwt', 'toa', 'tor', 'sva', 'svr',
 	  'svs', 'sps', 'ffa', 'ffw', 'ffs', 'fla', 'flw', 'fls', 'wsa', 'wsw',
 	  'bzw', 'hwa', 'hww', 'hua', 'huw', 'hls', 'tsa', 'tsw', 'evi', 'cem',
-	  'dmo', 'adr')
+	  'dmo', 'adr', 'cdw', 'cae', 'lew', 'lae', 'spw', 'toe', 'hmw', 'eww')
 originators = ('pep', 'wxr', 'civ', 'eas')
 arg_patterns = {'event':r'|'.join(events), 'fips':r'^(\d{6})(\s+\d{6})*$', 
 	        'timestamp':r'(now)|(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2})', 'originator':r'|'.join(originators), 
@@ -124,7 +125,7 @@ Fuzz mode: Generate a test with a non-standard EAS message using -z or --fuzz
 
 """)
 parser.add_argument("-v", "--ver", "--version", action='version', 
-	version="EASEncode Version {0}/Core version {1}".format(program_version,
+	version="NEXDEC EASEncode Alpha Version {0}/Core version {1}".format(program_version,
 		eastestgen_core_version) )
 parser.add_argument("-z", "--fuzz", dest="custom_msg", 
 	help="pass a non-standard EAS message string to encoder")
