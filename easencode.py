@@ -94,7 +94,9 @@ program_version = "0.1.0"
 events = ('ean', 'eat', 'nic', 'npt', 'rmt', 'rwt', 'toa', 'tor', 'sva', 'svr',
 	  'svs', 'sps', 'ffa', 'ffw', 'ffs', 'fla', 'flw', 'fls', 'wsa', 'wsw',
 	  'bzw', 'hwa', 'hww', 'hua', 'huw', 'hls', 'tsa', 'tsw', 'evi', 'cem',
-	  'dmo', 'adr', 'cdw', 'cae', 'lew', 'lae', 'spw', 'toe', 'hmw', 'eww')
+	  'dmo', 'adr', 'cdw', 'cae', 'lew', 'lae', 'spw', 'toe', 'hmw', 'eww',
+	  'bzw', 'frw', 'ava', 'avw', 'blu', 'sqw', 'nmn', 'rhw', 'nuw', 'smw',
+	  'tra', 'trw', 'dsw', 'cfa', 'cfw', 'eqw', 'vow')
 originators = ('pep', 'wxr', 'civ', 'eas')
 arg_patterns = {'event':r'|'.join(events), 'fips':r'^(\d{6})(\s+\d{6})*$', 
 	        'timestamp':r'(now)|(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2})', 'originator':r'|'.join(originators), 
