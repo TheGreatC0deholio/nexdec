@@ -106,7 +106,7 @@ first_parser = argparse.ArgumentParser(add_help=False)
 first_parser.add_argument("-z", "--fuzz", dest="custom_msg")
 #first_parser.add_argument("outputfile", metavar='OUTPUT.WAV', type=str)
 
-parser = argparse.ArgumentParser(description="A script to generate EAS messages",
+parser = argparse.ArgumentParser(description="A simple script for encoding SAME/EAS alert audio",
 	formatter_class=argparse.RawDescriptionHelpFormatter,
 	epilog="""Usage examples:
 
@@ -117,8 +117,8 @@ Generate a simple test, 15 minute duration
 Generate a test in the future
     %(prog)s -e RWT -f 029177 -d 0100 -t "12/31/2020 15:30" -c "WXYZ" eas-rwt.wav
 
-Generate a test with a voice message from input.wav
-    %(prog)s -e RWT -f 037124 -d 0015 -c KXYZ -a input.wav eas-rwt.wav
+Generate a test with a voice message from input.wav (example is a standard KNLO RWT)
+    %(prog)s -e RWT -f 049000 -d 0015 -c KNLO(IP) -a input.wav KNLO-RWT-202009xx.wav
 
 Fuzz mode: Generate a test with a non-standard EAS message using -z or --fuzz
     %(prog)s --fuzz "WXR-RAT-012345-111111+0123-BLAHBLAH-" output_eas.wav
@@ -128,7 +128,7 @@ parser.add_argument("-v", "--ver", "--version", action='version',
 	version="NEXDEC EASEncode Alpha Version {0}/Core version {1}".format(program_version,
 		eastestgen_core_version) )
 parser.add_argument("-z", "--fuzz", dest="custom_msg", 
-	help="pass a non-standard EAS message string to encoder")
+	help="encode custom header using SAME protocol (recommended to use proper SAME header format, otherwise it will be unusable)")
 parser.add_argument("-o", "--org", dest="originator",  
 	help="set the message originator", default='EAS')
 parser.add_argument("-e", "--event", dest="event", 
@@ -143,9 +143,9 @@ parser.add_argument("-t", "--start", dest="timestamp", default="now",
 	help="override the start timestamp, format is 'MM/DD/YYYY HH:MM'" \
 		" UTC timezone or use 'now' (default)")
 parser.add_argument("-c", "--call", dest="callsign",
-	help="set the originator call letters or id", required=True)
+	help="set the station/originator call letters or id", required=True)
 parser.add_argument("-a", "--audio-in", dest="audioin", type=str,
-	help="insert audio file between EAS header and eom; max length"
+	help="alert audio message (between headers and EOM - attention tone should be automatically added); max length"
 	" is 2 minutes")
 parser.add_argument('outputfile', metavar='OUTPUT.WAV', type=str)
 

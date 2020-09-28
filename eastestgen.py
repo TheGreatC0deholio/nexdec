@@ -47,7 +47,7 @@ if __name__ == "__main__":
     now = time.gmtime()
     timestamp = time.strftime('%j%H%M', now) 
 
-    data = generateEASpcmData('EAS', 'RWT', '029077', '0030', timestamp, 'KXYZ/FM', sampRate, 
+    data = generateEASpcmData('EAS', 'RWT', '049000', '0015', timestamp, 'KNLO(IP)', sampRate, 
 	    sampWidth, peakLevel, numCh)
     data = recursiveFilterPCMaudio(4000, sampRate, sampWidth, numCh, data)
     file = wave.open('testfile-filt.wav', 'wb')
