@@ -5,8 +5,7 @@ SAMEEAS (C) 2011 John McMellen
 Made available under MIT License just like its predecessor.
 
 NEXDEC is a project meant to eventually create the world's first fully functional software EAS ENDEC (encoder/decoder), available freely to all.
-Using existing, well-established and reliable libraries and building on them, NEXDEC aspires to be the next generation of EAS equipment, finally bringing a proper alert system
-to online stations at no cost.
+Using existing, well-established and reliable libraries and building on them, NEXDEC aspires to be the next generation of EAS equipment, finally bringing a proper alert system to online stations at no cost.
 
 See below for original README (with the exception of usage examples being altered).
 
