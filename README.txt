@@ -1,11 +1,13 @@
-NEXDEC Project
+OpenENDEC Project
 Based on jmcmellen's sameeas scripts
-NEXDEC (C) 2020 Nova Labs
+OpenENDEC and NEXDEC (C) 2020 Nova Labs
 SAMEEAS (C) 2011 John McMellen
 Made available under MIT License just like its predecessor.
 
-NEXDEC is a project meant to eventually create the world's first fully functional software EAS ENDEC (encoder/decoder), available freely to all.
-Using existing, well-established and reliable libraries and building on them, NEXDEC aspires to be the next generation of EAS equipment, finally bringing a proper alert system to online stations at no cost.
+OpenENDEC is a project meant to eventually create the world's first fully functional open-source software EAS ENDEC (encoder/decoder), available freely to all.
+Using existing, well-established and reliable libraries and building on them, OpenENDEC aspires to be the next generation of EAS equipment, finally bringing a proper alert system to online stations at no cost.
+
+At its core is NEXDEC, the command-line/terminal and background components that make up the OpenENDEC system's core functions. So far only the NEXDEC Core EASEncode component is publicly available; however, things in development include a basic graphical interface, an audio monitor background process based on dsame, and automation for relaying alerts. 
 
 See below for original README (with the exception of usage examples being altered).
 
