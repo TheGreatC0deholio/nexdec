@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Welcome to OpenENDEC!
+OpenENDEC is a free and open-source SAME/EAS encoding and decoding software suite with the goal of making EAS participation accessible and practical for online and low-power independent broadcasters. Built on existing reliable libraries, OpenENDEC takes the best there is to offer for individual components related to working with Specific Area Message Encoding (SAME), and puts them together to create a full alert solution.
 
-You can use the [editor on GitHub](https://github.com/TheGreatC0deholio/nexdec/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Setup
+To run OpenENDEC, you will need to install Python 2.7 (a Python 3 version is coming soon). Other than that, the currently released portion of the OpenENDEC project is completely self-contained (at least on Windows), and future components along with the package as a whole are intended to be fully self-contained as well.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Use
+To use the encoder, currently you will have to do so via command line. 
+As an example, to issue a Required Weekly Test with a duration of 15 minutes starting now with my online radio station's call targeted at the entire state of Utah, I would type this into Command Prompt while in the directory where nexdecencoder.exe is located:
+```nexdecencoder.exe -e RWT -f 049000 -d 0015 -c KNLO(IP) output.wav```
+Now let's briefly review the flags here:
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/TheGreatC0deholio/nexdec/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+-e is for your event code, in this example it is a Required Weekly Test (hence RWT). You can find a list of event codes here - all codes that are currently in use in the US are supported by OpenENDEC/NEXDEC Core: https://en.wikipedia.org/wiki/Specific_Area_Message_Encoding#Event_codes
+-f is where you enter in the FIPS codes the alert applies to. You can find yours here: https://www.weather.gov/pimar/FIPSCodes or by simply searching "(your area here) FIPS code".
+-d is the duration you want your alert to be valid for. The format is HHMM as you can see above. 
+-c is for a callsign/sender ID. This can be any string of 8 characters or less.
+And output.wav is the file I want it to be saved to after generating. The name can be anything as long as it still ends with the .wav file extension.
