@@ -96,7 +96,9 @@ events = ('ean', 'eat', 'nic', 'npt', 'rmt', 'rwt', 'toa', 'tor', 'sva', 'svr',
 	  'bzw', 'hwa', 'hww', 'hua', 'huw', 'hls', 'tsa', 'tsw', 'evi', 'cem',
 	  'dmo', 'adr', 'cdw', 'cae', 'lew', 'lae', 'spw', 'toe', 'hmw', 'eww',
 	  'bzw', 'frw', 'ava', 'avw', 'blu', 'sqw', 'nmn', 'rhw', 'nuw', 'smw',
-	  'tra', 'trw', 'dsw', 'cfa', 'cfw', 'eqw', 'vow')
+	  'tra', 'trw', 'dsw', 'cfa', 'cfw', 'eqw', 'vow', 'txb', 'txf', 'txo',
+	  'txp', 'bhw', 'bww', 'chw', 'cww', 'dba', 'dbw', 'dew', 'eva', 'fcw',
+	  'ibw', 'ifw', 'lsw', 'pos', 'wfa', 'wfw', 'fsw', 'fzw', 'nat', 'nst')
 originators = ('pep', 'wxr', 'civ', 'eas')
 arg_patterns = {'event':r'|'.join(events), 'fips':r'^(\d{6})(\s+\d{6})*$', 
 	        'timestamp':r'(now)|(\d{2}/\d{2}/\d{4}\s+\d{2}:\d{2})', 'originator':r'|'.join(originators), 
