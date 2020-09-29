@@ -1,3 +1,16 @@
+OpenENDEC Project
+Based on jmcmellen's sameeas scripts
+OpenENDEC and NEXDEC (C) 2020 Nova Labs
+SAMEEAS (C) 2011 John McMellen
+Made available under MIT License just like its predecessor.
+
+OpenENDEC is a project meant to eventually create the world's first fully functional open-source software EAS ENDEC (encoder/decoder), available freely to all.
+Using existing, well-established and reliable libraries and building on them, OpenENDEC aspires to be the next generation of EAS equipment, finally bringing a proper alert system to online stations at no cost.
+
+At its core is NEXDEC, the command-line/terminal and background components that make up the OpenENDEC system's core functions. So far only the NEXDEC Core EASEncode component is publicly available; however, things in development include a basic graphical interface, an audio monitor background process based on dsame, and automation for relaying alerts. 
+
+See below for original README (with the exception of usage examples being altered).
+
 ===============================================================
 License (see the MIT License)
 
@@ -43,7 +56,7 @@ and audioroutines.py (library functions for signal generation).
 The scripts were developed using Python 2.7 and should run
 correctly in any platform where Python 2.7 is installed.
 
-The executable file easencode.exe (easencode.py) provides 
+The executable file nexdecencoder.exe (easencode.py) provides 
 a simple commandline implementation of an EAS encoder. You 
 pass it the configuration details and the result is a WAVE
 file that *should* be an EAS message according to the 
@@ -65,12 +78,12 @@ USAGE EXAMPLES
 =============================================================
 
 Generate a simple test, 15 minute duration
-    easencode.exe -e RWT -f 029177 -d 0015 -c WXYZ eas-rwt.wav
-    easencode.exe -e RWT -f 029177 -d 0015 -t now -c "WXYZ FM" eas-rwt.wav
+    nexdecencoder.exe -e RWT -f 029177 -d 0015 -c WXYZ eas-rwt.wav
+    nexdecencoder.exe -e RWT -f 029177 -d 0015 -t now -c "WXYZ FM" eas-rwt.wav
 
 Generate a test with a voice message from input.wav
-    easencode.exe -e RWT -f 037124 -d 0015 -c KXYZ -a input.wav eas-rwt.wav
+    nexdecencoder.exe -e RWT -f 037124 -d 0015 -c KXYZ -a input.wav eas-rwt.wav
 
 Fuzz mode: Generate a test with a non-standard EAS message using -z or --fuzz
-    easencode.exe --fuzz "WXR-RAT-012345-111111+0123-BLAHBLAH-" output_eas.wav
+    nexdecencoder.exe --fuzz "WXR-RAT-012345-111111+0123-BLAHBLAH-" output_eas.wav
     Read the FCC rules for the exact format of an EAS message
