@@ -1,16 +1,19 @@
 OpenENDEC Project
-Based on jmcmellen's sameeas scripts
-OpenENDEC and NEXDEC (C) 2020 Nova Labs
+Based on jmcmellen's sameeas scripts, as well as cuppa-joe's dsame
+OpenENDEC and NEXDEC (C) 2022 Nova Labs
 SAMEEAS (C) 2011 John McMellen
-Made available under MIT License just like its predecessor.
+dsame (C) 2016 Joseph W. Metcalf
+Made available under MIT License.
 
 OpenENDEC is a project meant to eventually create the world's first fully functional open-source software EAS ENDEC (encoder/decoder), available freely to all.
 Using existing, well-established and reliable libraries and building on them, OpenENDEC aspires to be the next generation of EAS equipment, finally bringing a proper alert system to online stations at no cost.
 
 At its core is NEXDEC, the command-line/terminal and background components that make up the OpenENDEC system's core functions. So far only the NEXDEC Core EASEncode component is publicly available; however, things in development include a basic graphical interface, an audio monitor background process based on dsame, and automation for relaying alerts. 
 
-See below for original README (with the exception of usage examples being altered).
+See below for original README for sameeas (with the exception of usage examples being altered).
+See the GitHub Pages website https://thegreatc0deholio.github.io/OpenENDEC for more information about the other functions, or read dsame_README.MD from the repo.
 
+SAMEEAS
 ===============================================================
 License (see the MIT License)
 
@@ -43,6 +46,24 @@ purposes only. No guarantees of suitability or compatibility
 with any FCC approved EAS decoders are expressed or implied. 
 Users of the software are encouraged to do extensive testing
 before using in a production environment, if ever.
+
+DSAME
+==========================================================
+License (ISC)
+
+Copyright (c) 2016 Joseph W. Metcalf
+
+Permission to use, copy, modify, and/or distribute this software for any purpose 
+with or without fee is hereby granted, provided that the above copyright notice 
+and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL 
+WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF 
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, 
+DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM 
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER 
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR 
+PERFORMANCE OF THIS SOFTWARE. 
 
 HOW TO USE:
 ==========================================================
